@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário Aluno</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid cadetblue;
+        }
+        
+        h2 {
+            color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        label {
+            color: grey;
+        }
+        
+        .container {
+            width: 50vw;
+            height: 93vh;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 300px;
+            margin-right: 600px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Banco de Dados - CRUD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulario_alterar_dados_aluno.html">Atualizar Dados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulario_excluir_dados_aluno.html">Excluir Dados</a>
+            </li>
+
+        </ul>
+    </nav>
+    <br>
+
+    <div class="container">
+        <h2> Formulario para inserir dados de Alunos </h2>
+
+        <form action=" inserir_dados_aluno.php" class="was-validated" method="POST">
+            <div class="form-group ">
+                <label for="name ">Nome</label>
+                <input type="text " class="form-control " id="name " placeholder="Enter nome" name="nome" required>
+                <div class="valid-feedback ">Válido.</div>
+                <div class="invalid-feedback "> Escreva seu nome completo.</div>
+            </div>
+
+            <div class="form-group ">
+                <label for="e-mail ">Email</label>
+                <input type="text " class="form-control " id="e-mail " placeholder="Enter email " name="email" required>
+                <div class="valid-feedback ">Válido.</div>
+                <div class="invalid-feedback ">Escreva seu email de maneira correta.</div>
+            </div>
+
+            <div class="form-group ">
+                <label for="pwd">Senha</label>
+                <input type="password" class="form-control " id="pwd " placeholder="Enter password " name="senha" required>
+                <div class="valid-feedback ">Válido.</div>
+                <div class="invalid-feedback ">Senha deve conter no apenas 6 digitos.</div>
+            </div>
+            <br>
+
+
+            <button type="submit" class="btn btn-success ">Enviar</button>
+            <a href="consultar_dados_aluno.php" class="btn btn-info "> Lista de Alunos </a>
+        </form>
+    </div>
+
+</body>
+
+</html>
